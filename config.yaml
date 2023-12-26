@@ -15,23 +15,24 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: postmaster # unique identifier
-    name: postmaster.onxbox.net
-    description: 'Postmaster handles our emails.' # default=empty
-    url: 'https://postmaster.cloudflare.com/' # URL to fetch
-    method: GET # default=GET
-    expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
-
-  - id: onxboxgraph
-    name: graph.onxbox.co
-    description: 'OnXbox Graph API'
-    url: 'https://graph.onxbox.co/me'
+  - id: onxboxwww
+    name: www.onxbox.co
+    description: 'OnXbox Website'
+    url: 'https://www.onxbox.co/'
     method: GET
-    expectStatus: 401
-    linkable: false # allows the title to be a link, default=true
-
+    expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
+    
+  - id: onxboxcommunity
+    name: forums.onxbox.co
+    description: 'OnXbox Community'
+    url: 'https://forums.onxbox.co/'
+    method: GET
+    expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
+    
   - id: onxboxaccounts
     name: account.onxbox.co
     description: 'OnXbox Accounts Server'
@@ -39,4 +40,21 @@ monitors:
     method: GET
     expectStatus: 200
     followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true  
+    
+  - id: onxboxgraph
+    name: graph.onxbox.co
+    description: 'OnXbox Graph API'
+    url: 'https://graph.onxbox.co/me'
+    method: GET
+    expectStatus: 200
+    linkable: false # allows the title to be a link, default=true
+
+  - id: postmaster # unique identifier
+    name: postmaster.onxbox.net
+    description: 'Postmaster handles our emails.' # default=empty
+    url: 'https://postmaster.onxbox.net/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true

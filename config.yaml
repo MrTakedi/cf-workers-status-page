@@ -33,6 +33,33 @@ monitors:
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
     
+  - id: onxboxmail # unique identifier
+    name: mail.onxbox.net
+    description: 'The frontend to our free email experience.' # default=empty
+    url: 'https://mail.onxbox.net/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
+  
+  - id: onxboxcdn1
+    name: userimg.gs.onxbox.net
+    description: 'OnXbox CDN'
+    url: 'https://userimg.gs.onxbox.net/'
+    method: GET
+    expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true 
+     
+  - id: onxboxmailcdn
+    name: usercontent.mail.onxbox.net
+    description: 'This is the mail content proxy'
+    url: 'https://usercontent.mail.onxbox.net/'
+    method: GET
+    expectStatus: 403
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+    
   - id: onxboxaccounts
     name: account.onxbox.co
     description: 'OnXbox Accounts Server'

@@ -69,7 +69,7 @@ monitors:
     followRedirect: true # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true  
 
-    - id: onxboxprofile
+  - id: onxboxprofile
     name: profile.onxbox.co
     description: 'OnXbox Profiles Server'
     url: 'https://profile.onxbox.co/'

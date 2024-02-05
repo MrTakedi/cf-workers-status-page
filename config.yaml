@@ -52,8 +52,8 @@ monitors:
     linkable: false # allows the title to be a link, default=true 
      
   - id: onxboxmailcdn
-    name: usercontent.mail.onxbox.net
-    description: 'This is the mail content proxy'
+    name: mailimg.onxboxusercontent.com
+    description: 'This Server is the mail content (images, css, scripts, etc) proxy handler.'
     url: 'https://mailimg.onxboxusercontent.com/'
     method: GET
     expectStatus: 403

@@ -33,12 +33,21 @@ monitors:
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
     
-  - id: onxboxmail # unique identifier
-    name: mail.onxbox.net
+  - id: newmail # unique identifier
+    name: mail.onxbox.co
     description: 'The frontend to our free email experience.' # default=empty
-    url: 'https://mail.onxbox.net/' # URL to fetch
+    url: 'https://mail.onxbox.co/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
+    
+  - id: onxboxmail # unique identifier
+    name: mail.onxbox.net
+    description: 'The legacy email experience. (still up to migrate old emails)' # default=empty
+    url: 'https://mail.onxbox.net/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 302 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
   
@@ -88,7 +97,7 @@ monitors:
 
   - id: postmaster # unique identifier
     name: postmaster.onxbox.net
-    description: 'Postmaster handles our emails.' # default=empty
+    description: 'The Postmaster handles our emails.' # default=empty
     url: 'https://postmaster.onxbox.net/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200

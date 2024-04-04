@@ -76,8 +76,44 @@ monitors:
     method: GET
     expectStatus: 200
     followRedirect: true # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true  
+    linkable: false # allows the title to be a link, default=true
+    
+  - id: onxboxopenidus
+    name: onxbox.us.auth0.com
+    description: 'OnXbox US OpenID Connect Server'
+    url: 'https://onxbox.us.auth0.com/'
+    method: GET
+    expectStatus: 302
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
 
+  - id: onxboxopenideu
+    name: onxbox.eu.auth0.com
+    description: 'OnXbox EU OpenID Connect Server'
+    url: 'https://onxbox.eu.auth0.com/'
+    method: GET
+    expectStatus: 302
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+  - id: onxboxopenidjp
+    name: onxbox.jp.auth0.com
+    description: 'OnXbox JP OpenID Connect Server'
+    url: 'https://onxbox.jp.auth0.com/'
+    method: GET
+    expectStatus: 302
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+    
+  - id: onxboxopenidau
+    name: onxbox.au.auth0.com
+    description: 'OnXbox AU OpenID Connect Server'
+    url: 'https://onxbox.au.auth0.com/'
+    method: GET
+    expectStatus: 302
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+    
   - id: onxboxprofile
     name: profile.onxbox.co
     description: 'OnXbox Profiles Server'
